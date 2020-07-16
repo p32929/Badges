@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Badges/static/css/main.1c3fdcaf.chunk.css",
+    "main.js": "/Badges/static/js/main.4e5dedc9.chunk.js",
+    "main.js.map": "/Badges/static/js/main.4e5dedc9.chunk.js.map",
+    "runtime-main.js": "/Badges/static/js/runtime-main.b10b1726.js",
+    "runtime-main.js.map": "/Badges/static/js/runtime-main.b10b1726.js.map",
+    "static/js/2.c76ade54.chunk.js": "/Badges/static/js/2.c76ade54.chunk.js",
+    "static/js/2.c76ade54.chunk.js.map": "/Badges/static/js/2.c76ade54.chunk.js.map",
+    "index.html": "/Badges/index.html",
+    "precache-manifest.3d8383e7e524fa2ba110f14643453cf0.js": "/Badges/precache-manifest.3d8383e7e524fa2ba110f14643453cf0.js",
+    "service-worker.js": "/Badges/service-worker.js",
+    "static/css/main.1c3fdcaf.chunk.css.map": "/Badges/static/css/main.1c3fdcaf.chunk.css.map",
+    "static/js/2.c76ade54.chunk.js.LICENSE.txt": "/Badges/static/js/2.c76ade54.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b10b1726.js",
+    "static/js/2.c76ade54.chunk.js",
+    "static/css/main.1c3fdcaf.chunk.css",
+    "static/js/main.4e5dedc9.chunk.js"
+  ]
+}
