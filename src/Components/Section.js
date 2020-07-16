@@ -13,7 +13,7 @@ const Section = (props) => {
     return (
         <Paper style={{padding: 16, margin: 8}} elevation={2}>
             <Grid container direction='column' justify='center' alignContent='center' alignItems='center'>
-                <Typography>{item.name}</Typography>
+                <Typography variant='h6'>For {item.name}</Typography>
                 <Grid container item xs alignItems='center' alignContent='center' justify='center'>
                     <TextField onChange={(e) => {
                         try {

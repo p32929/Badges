@@ -1,6 +1,6 @@
 export const servicesAndBadges = [
     {
-        name: "Github -",
+        name: "Github (from Badgen.net)",
         badges: [
             "https://badgen.net/github/release/user/repo",
             "https://badgen.net/github/release/user/repo/stable",
