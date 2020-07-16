@@ -1,6 +1,15 @@
 export const servicesAndBadges = [
     {
         name: "Github",
+        splitter: (value, actions) => {
+            try {
+                var splittedParts = new URL(value).pathname.split("/")
+                actions.setUser(splittedParts[1])
+                actions.setRepo(splittedParts[2])
+            } catch (e) {
+                //
+            }
+        },
         badges: [
             "https://badgen.net/github/release/user/repo",
             "https://badgen.net/github/release/user/repo/stable",
@@ -26,15 +35,6 @@ export const servicesAndBadges = [
             "https://badgen.net/github/license/user/repo",
             "https://badgen.net/github/contributors/user/repo",
             "https://badgen.net/github/dependents-pkg/user/repo"],
-        options: [
-            "color",
-            "icon",
-            "list",
-            "label",
-            "labelColor",
-            "scale",
-            "cache",
-        ],
         moreDetails: "https://badgen.net/"
     },
     {
@@ -45,7 +45,6 @@ export const servicesAndBadges = [
             "https://badgen.net/pub/likes/dartpackage",
             "https://badgen.net/pub/sdk-version/dartpackage",
             "https://badgen.net/pub/flutter-platform/dartpackage"],
-        options: [],
         moreDetails: "https://badgen.net/"
     }
 ]

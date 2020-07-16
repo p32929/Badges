@@ -6,8 +6,6 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import {replacer} from "../Others/GlobalMethods";
-import Divider from "@material-ui/core/Divider";
-import CheckboxedTextfield from "./CheckboxedTextfield";
 
 const Section = (props) => {
     const {actions, state} = useOvermind()
@@ -19,14 +17,7 @@ const Section = (props) => {
                 <Typography variant='subtitle2'>{item.moreDetails}</Typography>
                 <Grid container item xs alignItems='center' alignContent='center' justify='center'>
                     <TextField onChange={(e) => {
-                        try {
-                            var splittedParts = new URL(e.target.value.toString()).pathname.split("/")
-                            actions.setUser(splittedParts[1])
-                            actions.setRepo(splittedParts[2])
-                        } catch (e) {
-                            //
-                        }
-
+                        item.splitter(e.target.value.toString(), actions)
                     }} size='small' variant='outlined'
                                style={{marginTop: 8, textAlignLast: 'center', width: '50%'}}
                                placeholder="Repo URL"></TextField>
@@ -44,17 +35,6 @@ const Section = (props) => {
                 </Grid>
 
             </Grid>
-            <Divider style={{margin: 32}}/>
-
-            <Grid container direction='row'>
-                {
-                    item.options.map((option) => {
-                        return <CheckboxedTextfield option={option}/>
-                    })
-                }
-            </Grid>
-            <Typography style={{marginLeft: 16, marginTop: 16}} variant='subtitle2'>For more details,
-                visit {item.moreDetails}</Typography>
         </Paper>
     );
 };
