@@ -1,6 +1,6 @@
 export const servicesAndBadges = [
     {
-        name: "Github (from Badgen.net)",
+        name: "Github",
         badges: [
             "https://badgen.net/github/release/user/repo",
             "https://badgen.net/github/release/user/repo/stable",
@@ -37,4 +37,15 @@ export const servicesAndBadges = [
         ],
         moreDetails: "https://badgen.net/"
     },
+    {
+        name: "Dart pub",
+        badges: ["https://badgen.net/pub/v/dartpackage",
+            "https://badgen.net/pub/v/dartpackage",
+            "https://badgen.net/pub/license/dartpackage",
+            "https://badgen.net/pub/likes/dartpackage",
+            "https://badgen.net/pub/sdk-version/dartpackage",
+            "https://badgen.net/pub/flutter-platform/dartpackage"],
+        options: [],
+        moreDetails: "https://badgen.net/"
+    }
 ]

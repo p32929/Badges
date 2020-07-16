@@ -7,7 +7,6 @@ import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import {replacer} from "../Others/GlobalMethods";
 import Divider from "@material-ui/core/Divider";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
 import CheckboxedTextfield from "./CheckboxedTextfield";
 
 const Section = (props) => {
@@ -16,7 +15,8 @@ const Section = (props) => {
     return (
         <Paper style={{padding: 16, margin: 8}} elevation={2}>
             <Grid container direction='column' justify='center' alignContent='center' alignItems='center'>
-                <Typography variant='h6'>For {item.name}</Typography>
+                <Typography variant='h6'>{item.name}</Typography>
+                <Typography variant='subtitle2'>{item.moreDetails}</Typography>
                 <Grid container item xs alignItems='center' alignContent='center' justify='center'>
                     <TextField onChange={(e) => {
                         try {
@@ -53,7 +53,7 @@ const Section = (props) => {
                     })
                 }
             </Grid>
-            <Typography style={{marginLeft: 16, marginTop: 16}} variant='subtitle2'>For more details about the options,
+            <Typography style={{marginLeft: 16, marginTop: 16}} variant='subtitle2'>For more details,
                 visit {item.moreDetails}</Typography>
         </Paper>
     );

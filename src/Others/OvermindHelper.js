@@ -8,7 +8,8 @@ export const useOvermind = createHook();
 export const overmind = createOvermind({
     state: {
         user: "p32929",
-        repo: "EasiestSqlLibrary"
+        repo: "EasiestSqlLibrary",
+        dartpackage: "easiestdb"
     },
     actions: {
         setUser({state}, user) {

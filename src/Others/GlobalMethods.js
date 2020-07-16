@@ -1,3 +1,3 @@
 export const replacer = (str, state) => {
-    return str.replace("user", state.user).replace("repo", state.repo)
+    return str.replace("user", state.user).replace("repo", state.repo).replace("dartpackage", state.dartpackage)
 }
