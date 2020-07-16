@@ -19,7 +19,7 @@ const WholeThing = (props) => {
 
             <Paper style={{padding: 16, margin: 8}} elevation={2}>
                 <Grid container direction='column' alignItems='center' alignContent='center' justify='center'>
-                    <TextField size='small' style={{textAlignLast: 'center'}} fullWidth variant='outlined'
+                    <TextField size='small' style={{textAlignLast: 'left'}} fullWidth variant='outlined'
                                value={state.code}
                                rows={5}
                                multiline={true}

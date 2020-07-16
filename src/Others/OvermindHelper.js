@@ -2,6 +2,7 @@
 // yarn add overmind overmind-react
 
 import {createOvermind} from "overmind";
+import {replacer} from '../Others/GlobalMethods'
 import {createHook} from "overmind-react";
 
 export const useOvermind = createHook();
@@ -88,7 +89,6 @@ export const overmind = createOvermind({
                 },
                 badges: [
                     "https://badgen.net/pub/v/dartpackage",
-                    "https://badgen.net/pub/v/dartpackage",
                     "https://badgen.net/pub/license/dartpackage",
                     "https://badgen.net/pub/likes/dartpackage",
                     "https://badgen.net/pub/sdk-version/dartpackage",
@@ -96,7 +96,6 @@ export const overmind = createOvermind({
                 ],
                 moreDetails: "https://badgen.net/",
                 checked: [
-                    false,
                     false,
                     false,
                     false,
@@ -144,9 +143,12 @@ var setCodeTexts = (state) => {
     for (var i = 0; i < state.servicesAndBadges.length; i++) {
         for (var j = 0; j < state.servicesAndBadges[i].badges.length; j++) {
             if (state.servicesAndBadges[i].checked[j]) {
-                code += state.servicesAndBadges[i].badges[j] + "\n";
+                // code += state.servicesAndBadges[i].badges[j] + "\n";
+                // <img src="https://badgen.net/pub/flutter-platform/easiestdb"></img>
+                code += `<img src="${state.servicesAndBadges[i].badges[j]}"></img> `
             }
         }
     }
+    code = replacer(code, state)
     state.code = code;
 }
