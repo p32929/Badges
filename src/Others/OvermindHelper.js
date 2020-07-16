@@ -144,8 +144,8 @@ var setCodeTexts = (state) => {
         for (var j = 0; j < state.servicesAndBadges[i].badges.length; j++) {
             if (state.servicesAndBadges[i].checked[j]) {
                 // code += state.servicesAndBadges[i].badges[j] + "\n";
-                // <img src="https://badgen.net/pub/flutter-platform/easiestdb"></img>
-                code += `<img src="${state.servicesAndBadges[i].badges[j]}"></img> `
+                // [![](https://badgen.net/pub/v/easiestdb)]()
+                code += `[![](${state.servicesAndBadges[i].badges[j]})]() `
             }
         }
     }
