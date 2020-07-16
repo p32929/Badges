@@ -21,7 +21,7 @@ const Section = (props) => {
                         item.splitter(e.target.value.toString(), actions)
                     }} size='small' variant='outlined'
                                style={{marginTop: 8, textAlignLast: 'center', width: '50%'}}
-                               placeholder="Repo URL"></TextField>
+                               placeholder={state.servicesAndBadges[index].placeholder}></TextField>
                 </Grid>
 
                 <Grid style={{marginTop: 16}} container direction='row' spacing={1}>

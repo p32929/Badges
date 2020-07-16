@@ -15,6 +15,7 @@ export const overmind = createOvermind({
         servicesAndBadges: [
             {
                 name: "Github",
+                placeholder: "Github repo url",
                 splitter: (value, actions) => {
                     try {
                         var splittedParts = new URL(value).pathname.split("/")
@@ -79,6 +80,7 @@ export const overmind = createOvermind({
             },
             {
                 name: "Dart pub",
+                placeholder: "Pub.dev package url",
                 splitter: (value, actions) => {
                     try {
                         var splittedParts = new URL(value).pathname.split("/")
