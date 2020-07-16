@@ -10,6 +10,7 @@ export const overmind = createOvermind({
         user: "p32929",
         repo: "EasiestSqlLibrary",
         dartpackage: "easiestdb",
+        code: "",
         servicesAndBadges: [
             {
                 name: "Github",
@@ -117,6 +118,7 @@ export const overmind = createOvermind({
         },
         setCheckboxState({state}, cb) {
             state.servicesAndBadges[cb.index].checked[cb.index2] = cb.b;
+            setCodeTexts(state)
         },
         setAllChecked({state}, index) {
             var checked = []
@@ -124,6 +126,7 @@ export const overmind = createOvermind({
                 checked[i] = true
             }
             state.servicesAndBadges[index].checked = checked
+            setCodeTexts(state)
         },
         setAllUnchecked({state}, index) {
             var checked = []
@@ -131,6 +134,19 @@ export const overmind = createOvermind({
                 checked[i] = false
             }
             state.servicesAndBadges[index].checked = checked
+            setCodeTexts(state)
         }
     }
 });
+
+var setCodeTexts = (state) => {
+    var code = ""
+    for (var i = 0; i < state.servicesAndBadges.length; i++) {
+        for (var j = 0; j < state.servicesAndBadges[i].badges.length; j++) {
+            if (state.servicesAndBadges[i].checked[j]) {
+                code += state.servicesAndBadges[i].badges[j] + "\n";
+            }
+        }
+    }
+    state.code = code;
+}

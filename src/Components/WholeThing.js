@@ -4,6 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Section from "./Section";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const WholeThing = (props) => {
     const {actions, state} = useOvermind()
@@ -17,8 +18,15 @@ const WholeThing = (props) => {
             }
 
             <Paper style={{padding: 16, margin: 8}} elevation={2}>
-                <TextField size='small' style={{textAlignLast: 'center'}} fullWidth variant='outlined'
-                           placeholder="CODE TO COPY"/>
+                <Grid container direction='column' alignItems='center' alignContent='center' justify='center'>
+                    <TextField size='small' style={{textAlignLast: 'center'}} fullWidth variant='outlined'
+                               value={state.code}
+                               rows={5}
+                               multiline={true}
+                               placeholder="CODE TO COPY"/>
+                    <Button style={{width: '100%', margin: 8}} variant='contained' color='primary'>Copy to
+                        clipboard</Button>
+                </Grid>
             </Paper>
 
         </Grid>
