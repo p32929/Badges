@@ -28,15 +28,16 @@ const Section = (props) => {
                     {
                         item.badges.map((badge, index2) => {
                             return <Grid container direction='row' item xs={3}>
-                                <Checkbox onChange={(e) => {
-                                    var b = e.target.checked
-                                    const cb = {
-                                        b,
-                                        index,
-                                        index2
-                                    }
-                                    actions.setCheckboxState(cb)
-                                }}/>
+                                <Checkbox name={index2} checked={state.servicesAndBadges[index].checked[index2]}
+                                          onChange={(e) => {
+                                              var b = e.target.checked
+                                              const cb = {
+                                                  b,
+                                                  index,
+                                                  index2
+                                              }
+                                              actions.setCheckboxState(cb)
+                                          }}/>
                                 <img src={replacer(badge, state)}/>
                             </Grid>
 
@@ -51,8 +52,12 @@ const Section = (props) => {
 
             <Grid container direction='row' justify='center' alignItems='center'
                   alignContent='center'>
-                <Button style={{margin: 8}} color='primary' variant='contained'>Select All</Button>
-                <Button style={{margin: 8}} color='primary' variant='contained'>Select None</Button>
+                <Button onClick={() => {
+                    actions.setAllChecked(index);
+                }} style={{margin: 8}} color='primary' variant='contained'>Select All</Button>
+                <Button onClick={() => {
+                    actions.setAllUnchecked(index)
+                }} style={{margin: 8}} color='primary' variant='contained'>Select None</Button>
             </Grid>
 
         </Paper>

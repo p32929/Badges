@@ -1,7 +1,6 @@
 import React from 'react';
 import {useOvermind} from '../Others/OvermindHelper'
 import Grid from "@material-ui/core/Grid";
-import {servicesAndBadges} from '../Others/GlobalVars'
 import Section from "./Section";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
@@ -12,7 +11,7 @@ const WholeThing = (props) => {
     return (
         <Grid>
             {
-                servicesAndBadges.map((item, index) => {
+                state.servicesAndBadges.map((item, index) => {
                     return <Section item={item} key={index} index={index}/>
                 })
             }
