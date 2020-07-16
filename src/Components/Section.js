@@ -53,7 +53,8 @@ const Section = (props) => {
                     })
                 }
             </Grid>
-
+            <Typography style={{marginLeft: 16, marginTop: 16}} variant='subtitle2'>For more details about the options,
+                visit {item.moreDetails}</Typography>
         </Paper>
     );
 };
