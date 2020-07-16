@@ -1,4 +1,4 @@
-# Share
+## Share
 Sharing with your friends is just one click away from here
 
 [![facebook](https://image.flaticon.com/icons/png/32/124/124010.png)](https://www.facebook.com/sharer/sharer.php?u=shareurl)

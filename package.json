@@ -2,7 +2,7 @@
   "name": "reactjs-p32929",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://p32929.github.io/BadgeGen",
+  "homepage": "https://p32929.github.io/Badges",
   "author": "p32929",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
