@@ -89,14 +89,12 @@ export const overmind = createOvermind({
                 },
                 badges: [
                     "https://badgen.net/pub/v/dartpackage",
-                    "https://badgen.net/pub/license/dartpackage",
                     "https://badgen.net/pub/likes/dartpackage",
                     "https://badgen.net/pub/sdk-version/dartpackage",
                     "https://badgen.net/pub/flutter-platform/dartpackage"
                 ],
                 moreDetails: "https://badgen.net/",
                 checked: [
-                    false,
                     false,
                     false,
                     false,
@@ -111,9 +109,11 @@ export const overmind = createOvermind({
         },
         setRepo({state}, repo) {
             state.repo = repo
+            setCodeTexts(state)
         },
         setDartPackage({state}, dartpackage) {
             state.dartpackage = dartpackage
+            setCodeTexts(state)
         },
         setCheckboxState({state}, cb) {
             state.servicesAndBadges[cb.index].checked[cb.index2] = cb.b;
