@@ -17,6 +17,9 @@ export const overmind = createOvermind({
         },
         setRepo({state}, repo) {
             state.repo = repo
+        },
+        setDartPackage({state}, dartpackage) {
+            state.dartpackage = dartpackage
         }
     }
 });

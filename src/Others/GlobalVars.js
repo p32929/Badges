@@ -39,6 +39,14 @@ export const servicesAndBadges = [
     },
     {
         name: "Dart pub",
+        splitter: (value, actions) => {
+            try {
+                var splittedParts = new URL(value).pathname.split("/")
+                actions.setDartPackage(splittedParts[2])
+            } catch (e) {
+                //
+            }
+        },
         badges: ["https://badgen.net/pub/v/dartpackage",
             "https://badgen.net/pub/v/dartpackage",
             "https://badgen.net/pub/license/dartpackage",
