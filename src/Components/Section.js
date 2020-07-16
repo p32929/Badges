@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 
 const Section = (props) => {
     const {actions, state} = useOvermind()
-    const {item} = props;
+    const {item, index} = props;
     return (
         <Paper style={{padding: 16, margin: 8}} elevation={2}>
             <Grid container direction='column' justify='center' alignContent='center' alignItems='center'>
@@ -26,11 +26,23 @@ const Section = (props) => {
 
                 <Grid style={{marginTop: 16}} container direction='row' spacing={1}>
                     {
-                        item.badges.map((badge, index) => {
+                        item.badges.map((badge, index2) => {
                             return <Grid container direction='row' item xs={3}>
-                                <Checkbox/>
+                                <Checkbox onChange={(e) => {
+                                    var b = e.target.checked
+                                    const cb = {
+                                        b,
+                                        index,
+                                        index2
+                                    }
+                                    actions.setCheckboxState(cb)
+                                }}/>
                                 <img src={replacer(badge, state)}/>
                             </Grid>
+
+                            // return <Grid item xs={12}>
+                            //     <p>{replacer(badge, state)}</p>
+                            // </Grid>
                         })
                     }
                 </Grid>

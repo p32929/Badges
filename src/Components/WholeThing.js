@@ -13,7 +13,7 @@ const WholeThing = (props) => {
         <Grid>
             {
                 servicesAndBadges.map((item, index) => {
-                    return <Section item={item} key={index}/>
+                    return <Section item={item} key={index} index={index}/>
                 })
             }
 
