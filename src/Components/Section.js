@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import {replacer} from "../Others/GlobalMethods";
+import Button from "@material-ui/core/Button";
 
 const Section = (props) => {
     const {actions, state} = useOvermind()
@@ -35,6 +36,13 @@ const Section = (props) => {
                 </Grid>
 
             </Grid>
+
+            <Grid container direction='row' justify='center' alignItems='center'
+                  alignContent='center'>
+                <Button style={{margin: 8}} color='primary' variant='contained'>Select All</Button>
+                <Button style={{margin: 8}} color='primary' variant='contained'>Select None</Button>
+            </Grid>
+
         </Paper>
     );
 };
