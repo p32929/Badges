@@ -6,6 +6,9 @@ import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
 import {replacer} from "../Others/GlobalMethods";
+import Divider from "@material-ui/core/Divider";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import CheckboxedTextfield from "./CheckboxedTextfield";
 
 const Section = (props) => {
     const {actions, state} = useOvermind()
@@ -41,6 +44,16 @@ const Section = (props) => {
                 </Grid>
 
             </Grid>
+            <Divider style={{margin: 32}}/>
+
+            <Grid container direction='row'>
+                {
+                    item.options.map((option) => {
+                        return <CheckboxedTextfield option={option}/>
+                    })
+                }
+            </Grid>
+
         </Paper>
     );
 };

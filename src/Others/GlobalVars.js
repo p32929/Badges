@@ -26,5 +26,15 @@ export const servicesAndBadges = [
             "https://badgen.net/github/license/user/repo",
             "https://badgen.net/github/contributors/user/repo",
             "https://badgen.net/github/dependents-pkg/user/repo"],
+        options: [
+            "color",
+            "icon",
+            "list",
+            "label",
+            "labelColor",
+            "scale",
+            "cache",
+        ],
+        moreDetails: "https://badgen.net/"
     },
 ]
