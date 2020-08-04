@@ -15,7 +15,7 @@ const Section = (props) => {
         <Paper style={{padding: 16, margin: 8}} elevation={2}>
             <Grid container direction='column' justify='center' alignContent='center' alignItems='center'>
                 <Typography variant='h6'>{item.name}</Typography>
-                <Typography variant='subtitle2'>{item.moreDetails}</Typography>
+                <Typography variant='subtitle2'>Thanks to {item.moreDetails}</Typography>
                 <Grid container item xs alignItems='center' alignContent='center' justify='center'>
                     <TextField onChange={(e) => {
                         item.splitter(e.target.value.toString(), actions)

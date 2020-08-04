@@ -5,6 +5,7 @@ import Section from "./Section";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import Footer from "./Footer";
 
 const WholeThing = (props) => {
     const {actions, state} = useOvermind()
@@ -30,6 +31,8 @@ const WholeThing = (props) => {
                         clipboard</Button>
                 </Grid>
             </Paper>
+
+            <Footer/>
 
         </Grid>
     );
