@@ -25,7 +25,7 @@ const WholeThing = (props) => {
                                rows={5}
                                multiline={true}
                                placeholder="CODE TO COPY"/>
-                    <Button onClick={() => {
+                    <Button size='small' onClick={() => {
                         navigator.clipboard.writeText(state.code)
                     }} style={{width: '100%', margin: 8}} variant='contained' color='primary'>Copy to
                         clipboard</Button>

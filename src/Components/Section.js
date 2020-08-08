@@ -27,7 +27,7 @@ const Section = (props) => {
                 <Grid style={{marginTop: 16}} container direction='row' spacing={1}>
                     {
                         item.badges.map((badge, index2) => {
-                            return <Grid container direction='row' item xs={3}>
+                            return <Grid item xs={12} sm={12} md={6} lg={3} xl={3} container direction='row' item>
                                 <Checkbox name={index2} checked={state.servicesAndBadges[index].checked[index2]}
                                           onChange={(e) => {
                                               var b = e.target.checked
@@ -52,10 +52,10 @@ const Section = (props) => {
 
             <Grid container direction='row' justify='center' alignItems='center'
                   alignContent='center'>
-                <Button onClick={() => {
+                <Button size='small' onClick={() => {
                     actions.setAllChecked(index);
                 }} style={{margin: 8}} color='primary' variant='contained'>Select All</Button>
-                <Button onClick={() => {
+                <Button size='small' onClick={() => {
                     actions.setAllUnchecked(index)
                 }} style={{margin: 8}} color='primary' variant='contained'>Select None</Button>
             </Grid>

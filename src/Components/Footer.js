@@ -5,7 +5,8 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = {
     text: {
-        color: "#FFF"
+        color: "#FFF",
+        padding: 16
     }
 }
 
@@ -14,7 +15,8 @@ const Footer = (props) => {
 
     return (
         <Grid alignContent='center' alignItems='center' justify='center'
-              style={{height: 56, background: "#757575", margin: 8, width: '100%'}} container direction='column'>
+              style={{height: 56, background: "#757575", margin: 8, width: '100%'}} container
+              direction='column'>
             <Typography style={styles.text}>Star/Fork it: <a
                 style={{color: "#fff"}}
                 href="https://github.com/p32929/Badges/">https://github.com/p32929/Badges/</a></Typography>
