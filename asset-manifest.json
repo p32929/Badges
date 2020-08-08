@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/Badges/static/css/main.1c3fdcaf.chunk.css",
-    "main.js": "/Badges/static/js/main.5b3e1b42.chunk.js",
-    "main.js.map": "/Badges/static/js/main.5b3e1b42.chunk.js.map",
+    "main.js": "/Badges/static/js/main.e7c1178a.chunk.js",
+    "main.js.map": "/Badges/static/js/main.e7c1178a.chunk.js.map",
     "runtime-main.js": "/Badges/static/js/runtime-main.b10b1726.js",
     "runtime-main.js.map": "/Badges/static/js/runtime-main.b10b1726.js.map",
-    "static/js/2.e141d7fa.chunk.js": "/Badges/static/js/2.e141d7fa.chunk.js",
-    "static/js/2.e141d7fa.chunk.js.map": "/Badges/static/js/2.e141d7fa.chunk.js.map",
+    "static/js/2.b0d67e87.chunk.js": "/Badges/static/js/2.b0d67e87.chunk.js",
+    "static/js/2.b0d67e87.chunk.js.map": "/Badges/static/js/2.b0d67e87.chunk.js.map",
     "index.html": "/Badges/index.html",
-    "precache-manifest.7ec88ca2914c1065c75e744dc93e3218.js": "/Badges/precache-manifest.7ec88ca2914c1065c75e744dc93e3218.js",
+    "precache-manifest.1ee946c8a9ed663abc2497d911c10476.js": "/Badges/precache-manifest.1ee946c8a9ed663abc2497d911c10476.js",
     "service-worker.js": "/Badges/service-worker.js",
     "static/css/main.1c3fdcaf.chunk.css.map": "/Badges/static/css/main.1c3fdcaf.chunk.css.map",
-    "static/js/2.e141d7fa.chunk.js.LICENSE.txt": "/Badges/static/js/2.e141d7fa.chunk.js.LICENSE.txt"
+    "static/js/2.b0d67e87.chunk.js.LICENSE.txt": "/Badges/static/js/2.b0d67e87.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b10b1726.js",
-    "static/js/2.e141d7fa.chunk.js",
+    "static/js/2.b0d67e87.chunk.js",
     "static/css/main.1c3fdcaf.chunk.css",
-    "static/js/main.5b3e1b42.chunk.js"
+    "static/js/main.e7c1178a.chunk.js"
   ]
 }
