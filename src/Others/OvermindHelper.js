@@ -12,6 +12,7 @@ export const overmind = createOvermind({
         repo: "EasiestSqlLibrary",
         dartpackage: "easiestdb",
         code: "",
+        isShowingSnackbar: false,
         servicesAndBadges: [
             {
                 name: "Github",
@@ -136,6 +137,9 @@ export const overmind = createOvermind({
             }
             state.servicesAndBadges[index].checked = checked
             setCodeTexts(state)
+        },
+        showSnackbar({state}, b) {
+            state.isShowingSnackbar = b;
         }
     }
 });

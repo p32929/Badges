@@ -6,6 +6,7 @@ import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Footer from "./Footer";
+import Snackbar from "@material-ui/core/Snackbar";
 
 const WholeThing = (props) => {
     const {actions, state} = useOvermind()
@@ -27,12 +28,28 @@ const WholeThing = (props) => {
                                placeholder="CODE TO COPY"/>
                     <Button size='small' onClick={() => {
                         navigator.clipboard.writeText(state.code)
+                        actions.showSnackbar(true)
                     }} style={{width: '100%', margin: 8}} variant='contained' color='primary'>Copy to
                         clipboard</Button>
                 </Grid>
             </Paper>
 
             <Footer/>
+
+            <Snackbar
+                autoHideDuration={3000}
+                open={state.isShowingSnackbar}
+                onClose={() => {
+                    actions.showSnackbar(false)
+                }}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'center',
+                }}
+                message="Copied to clipboard"
+            >
+
+            </Snackbar>
 
         </Grid>
     );
